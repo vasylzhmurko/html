@@ -1,39 +1,65 @@
 <html>
 <head>
 <meta charset="utf-8">
+  
 <style>
+  
 body {
-	background: #333;
+        width:100%;
+	background: rgba(101,111,101,0.5);
 	color: #333;
 }
+	
+.container {
+    	width: 90%;
+    	margin: 0 auto;
+  }
 
 dl,dt,dd {
 	width: 90%;
 	padding: 5%;
-	margin: .05%;
+	margin: .05%; 
 }
-dl {	
-	background: ;
-}
+
+	
 dt {
-	color: #9f5f4f;
-	font-size: 1.3em;
-	background: #efecef;
+     color: #9f5f4f;
+     font-size: 1.5em;
+     background: #efecef;
+     font-weight: 700;
+     text-align: center;
 }
+	
+	
+ dt:hover {
+    color: #ff8000;
+    font-size: 1.7em;
+    text-shadow: 2px -1px 1px rgba(0,0,0,0.3);
+  }
+	
+  
 dd {
-	text-align: center;
-	display: inline-block;
-	background: #fdffef;
+    display: inline-block;
+    background: #fdffef;
+    font-size: 1.3em;
+    font-weight: 700;
 }
+  
+	
 img {
-	width: 100%;
+    width: 100%;
 }
+   
 </style>
 </head>
+  
+  
 <body>
+  <div class="container">
+    
 <dl>
 	<dt>
-		Developer name
+	Developer name
 		<dd>
 			Vasyl
 		</dd>
@@ -54,5 +80,8 @@ img {
 		</dd>
        </dt>
 </dl>
+
+</div>
+
 </body>
 </html>
