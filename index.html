@@ -42,6 +42,7 @@ dt {
 	
   
 dd {
+    color: #fff;
     margin: 1%;
     display: inline-block;
     width: 12.5%;
@@ -49,6 +50,8 @@ dd {
     background: #fdffef;
     font-size: 1.3em;
     font-weight: 700;
+    transition: background .2s;
+    cursor: pointer;
 }
 
 dd:last-child {
@@ -58,12 +61,22 @@ dd:last-child {
     max-height: 500px;
     overflow: hidden;
 }
+
+dd:hover {
+	color: #fff;
+	background: #6f9fbf;
+}
   
 	
 img {
+    transition:opacity, transform 3s;
     width: 100%;
+    opacity: .1;
    }
    
+img:hover {
+   opacity: 1;
+}
 @media only screen and (max-width: 1300px) {
 dd {
 	display: block;
@@ -79,6 +92,11 @@ dd:last-child {
 }
 
 
+}
+
+img:hover {
+	cursor: pointer;
+	
 }
 
 </style>
@@ -120,6 +138,20 @@ dd:last-child {
 
 </div>
 <script>
+var img = document.getElementsByTagName("img");
+img	= img[0];
+img.addEventListener("mouseover", function(){
+	this.style.transform = "scale(110%)";
+	this.style.transform += "rotate(2deg)";
+	console.log("Scale the image.");
+});
+img.addEventListener("mouseout", function(){
+	this.style.transform = "scale(100%)";
+	console.log("Scale the image.");
+});
+
+
+
 var date = new Date().toString().substring(0, 15);
 document.getElementsByTagName("dt")[1].nextSibling.innerText = date;
 </script>
