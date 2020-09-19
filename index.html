@@ -6,8 +6,8 @@
   
 body {
         width:100%;
-	background: rgba(101,111,101,0.5);
-	color: #333;
+	background: rgba(101,111,101,0.3);
+	color: #556677;
 }
 	
 .container {
@@ -21,6 +21,9 @@ dl,dt,dd {
 	margin: .05%; 
 }
 
+dl {
+	border:1px solid #fff;
+}
 	
 dt {
      color: #9f5f4f;
@@ -28,28 +31,57 @@ dt {
      background: #efecef;
      font-weight: 700;
      text-align: center;
+     margin: 1% 0;
 }
 	
 	
  dt:hover {
     color: #ff8000;
-    font-size: 1.7em;
-    text-shadow: 2px -1px 1px rgba(0,0,0,0.3);
+    text-shadow: 1px .5px .5px rgba(0,0,2,1);
+    transition: color, text-shadow .2s;
   }
 	
   
 dd {
+    margin: 1%;
     display: inline-block;
+    width: 12.5%;
+    text-align: center;
     background: #fdffef;
     font-size: 1.3em;
     font-weight: 700;
+}
+
+dd:last-child {
+	padding: 0;
+	display: block;
+	width: 98%;
+	max-height: 500px;
+	overflow: hidden;
 }
   
 	
 img {
     width: 100%;
-}
+   }
    
+@media only screen and (max-width: 1300px) {
+dd {
+	display: block;
+	width: 88%;
+}
+
+dd:last-child {
+	padding: 0;
+	display: block;
+	width: 98%;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+
+}
+
 </style>
 </head>
   
@@ -66,6 +98,12 @@ img {
 		<dd>
 			Igor
 		</dd>
+		<dd>
+			Bob
+		</dd>
+		<dd>
+			Stefany
+		</dd>
 	</dt>
 	<dt>
 		Date
@@ -76,12 +114,16 @@ img {
 	<dt> 
 		Image
 		<dd>
-		<img src="https://tse3-mm.cn.bing.net/th/id/OIP._pmiU6vzcNZ32btWSEBfwgHaE3?pid=Api&rs=1">
+		<img src="http://static.asiawebdirect.com/m/phuket/portals/china-hotels-ws/homepage/lijiang/pagePropertiesImage/lijiang.jpg.jpg">
 		</dd>
        </dt>
 </dl>
 
 </div>
-
+<script>
+var date = new Date().toString().substring(0, 15);
+document.getElementsByTagName("dt")[1].nextSibling.innerText = date;
+console.log();
+</script>
 </body>
 </html>
