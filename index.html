@@ -1,62 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-  
-<style>
-* {
-	margin			:  0;
-	padding		:  0;
-}
-.container {
-	width			:  100%;
-	background	:  #012;
-	color			:  white;
-}  
-img {
-	width			:  100%;
-}
-h1 {
-	text-align		:  center;
-	padding		:  10% 0;
-	font-size		:  5em;
-}
-p {
-	font-size		:  2em;
-	padding		:  10% 2%;
-	text-indent		:  5%;
-	text-align		:  justify;
-}
-
-@media only screen and (min-width: 800px) {
-	.container {
-		width: 80%;
-		margin: 0 10%;
-	}
-	h1 {
-		font-size: 2em;
-		padding: 6% 0;
-	}
-	p {
-		padding: 3%;
-		font-size: 1em;
-	}
-}
-
-@media only screen and (min-width: 1300px) {
-	.container {
-		width: 50%;
-		margin: 0 25%;
-	}
-	h1 {
-		font-size: 1em;
-		padding: 5% 0;
-	}
-	p {
-		padding: 5%;
-		font-size: .7em;
-	}
-}
-</style>
+<link rel="stylesheet" href="styles.css" type="text/css">  
 </head>
   
   
@@ -71,21 +16,19 @@ The monarch butterfly (Danaus plexippus) is an insect in the Nymphalidae family.
 </p>
 </div>
 <script>
-var width = document.documentElement.clientWidth;
-var resize = function(index, size){
-	var container = document.getElementsByClassName("container");
-	container[index].style.width = size;
-	container[index].style.margin = "0 25%"
-	console.log(container[index].children);
-	for(child in container[index].children) {
-		var el = container[index].children[child];
-		if (el.tagName == "H1") {
-			el.style.fontSize = "3em";			
-		} else {
-			el.style.fontSize = "1em";
-		}
-	}
+
+
+
+
+var getRandomInt = function(max){
+	return Math.floor(Math.random() * Math.floor(max));
 };
+
+
+
+var image = document.getElementsByTagName("img")[0];
+
+
 
 </script>
 </body>
