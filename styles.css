@@ -2,6 +2,10 @@
       margin: 0;
       padding: 0;
 }
+promt {
+	background: red;
+}
+
 .container {
       width: 100%;
       background: #012;

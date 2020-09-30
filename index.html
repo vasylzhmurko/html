@@ -16,18 +16,13 @@ The monarch butterfly (Danaus plexippus) is an insect in the Nymphalidae family.
 </p>
 </div>
 <script>
-
-
-
-
-var getRandomInt = function(max){
-	return Math.floor(Math.random() * Math.floor(max));
+var getRandomInt = function(min, max){
+	return Math.random() * (max - min)  + min;
 };
-
-
-
-var image = document.getElementsByTagName("img")[0];
-
+var age = prompt("Hi, tell me, please, how old are you?");
+var currentYear = new Date().getFullYear();
+var year = getRandomInt((currentYear - age + 5), currentYear).toFixed()
+document.getElementsByTagName("h1")[0].innerHTML = "Do you remember your "+year+" year? Where have you been? What did you do?";
 
 
 </script>
