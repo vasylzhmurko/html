@@ -1,0 +1,157 @@
+<html>
+<head>
+<style>
+body {
+	background: url(https://im0-tub-com.yandex.net/i?id=6e1015c0250c03a2cd3f6b6be98ff048&n=13);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: relative;
+	z-index: 5;
+	text-align: center;
+}
+h1 {
+	float: left;
+	margin: 0 5%;
+	color: white;
+}
+.container {
+	width: 224px;
+	height: 224px;
+	transform: rotate(45deg);
+	margin: 20% auto;
+	
+}
+
+.container:hover{
+	animation: rotation 10s .3s;
+	cursor:pointer;
+}
+.leaf-1, .leaf-2, .leaf-3, .leaf-4 {
+	margin: 4px;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	float: left;
+}
+.leaf-1 {
+	transform: rotate(180deg);
+}
+.leaf-2 {
+	transform: rotate(270deg);
+}
+.leaf-3 {
+	transform: rotate(90deg);
+}
+.leaf-4 {
+	transform: rotate(0deg);
+}
+
+
+
+.square {
+	position: absolute;
+	z-index: 3;
+	opacity: 1;
+	
+	}
+.circle {
+	overflow: hidden;
+	position: absolute;
+	border-radius: 50%;
+	z-index: 5;
+	opacity: 1;
+}
+.square, .circle {
+	background: url(https://cdn.pixabay.com/photo/2017/01/01/12/51/leaves-1944480_640.jpg) 50%;
+	width: 100px;
+	height: 100px;
+}
+.wrapper {
+	
+	width: 50px;
+	height: 50px;
+	background: rgba(0,0,0,.7);
+	float: left;
+	position: relative;
+	z-index: 5;
+	opacity: 1;		
+}
+.wrapper:first-child {
+	opacity: 0;
+	z-index: 888;
+}
+@keyframes rotation {
+0% {
+	transform: rotate(45deg);
+}
+50% {
+	transform: rotate(2600deg);
+}
+100% {
+	transform: rotate(45deg);
+}
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		color: orange;
+	}
+	.container {
+		width: 55px;
+	}
+	.leaf-1, .leaf-2, .leaf-3, .leaf-4, .circle, .square {
+ 		width: 25px;
+		margin: 1px;
+		height: 25px;
+	}
+	.wrapper  {
+		width: 12px;
+		height: 12px;
+	}
+	
+}
+
+</style>
+<title>CSS Leaves</title>
+</head>
+
+<body>
+<h1>CSS Leaves</h1>
+<div class="container">
+<div class="leaf-1">
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>	
+	<div class="square"></div>
+	<div class="circle"></div>		
+</div>
+<div class="leaf-2">
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>	
+	<div class="square"></div>
+	<div class="circle"></div>		
+</div>
+<div class="leaf-3">
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>	
+	<div class="square"></div>
+	<div class="circle"></div>		
+</div>
+<div class="leaf-4">
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>
+	<div class="wrapper"></div>	
+	<div class="square"></div>
+	<div class="circle"></div>		
+</div>
+</div>
+
+
+</body>
+</html>
